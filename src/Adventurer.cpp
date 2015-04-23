@@ -14,6 +14,7 @@ private:
 	int hp_,sp_,str_,stam_,mag_,luk_,ID_;
 	//The ID field exists to be
 
+public:
 	Adventurer(){
 		//Empty constructor. Creates a blank slate.
 		name_="";
@@ -152,11 +153,6 @@ private:
 		std::cout << "Stamina:  " << stam_<< std::endl;
 		std::cout << "Magic:    " << mag_<< std::endl;
 		std::cout << "Luck:     " << luk_<< std::endl;
-	}
-
-	void main(int argc,char *argv[]){
-		Adventurer Bob("Bob",0,0,0,0,0,0);
-		Bob.print();
 	}
 };
 
