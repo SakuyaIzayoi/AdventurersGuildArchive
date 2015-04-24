@@ -7,4 +7,7 @@
 
 ## Building
 
-Simply run `make` to make the project.
+Simply run `make` to make the project. Execute `./adv` to run it.
+
+## Testing
+Unit tests can be built by running `make test`. Execute `./test` to run the unit tests.
