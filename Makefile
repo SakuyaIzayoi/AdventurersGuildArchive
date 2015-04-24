@@ -1,12 +1,14 @@
 NAME = adv
-SRC = Adventurer.cpp main.cpp saveAdventurerList.cpp loadAdventurerList.cpp
+SRC = Adventurer.cpp saveAdventurerList.cpp loadAdventurerList.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
+MAIN = main.o
+TEST = test.o
 
 #
 
-all: $(OBJ)
-	g++ $(OBJ) -o $(NAME)
+all: $(OBJ) $(MAIN)
+	g++ $(OBJ) $(MAIN) -o $(NAME)
 
 clean:
 	-$(RM) *~
@@ -17,5 +19,9 @@ clean:
 
 fclean: clean
 	-$(RM) $(NAME)
+	-$(RM) test
 
 re: fclean all clean
+
+test: $(OBJ) $(TEST)
+	g++ $(OBJ) $(TEST) -o test
