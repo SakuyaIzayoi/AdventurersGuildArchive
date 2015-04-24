@@ -16,4 +16,6 @@ int main(int argc, char **argv)
     }
 
     saveAdventurerList();
+
+    return 0;
 }
