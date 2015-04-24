@@ -6,7 +6,7 @@ bool saveAdventurerList(){
   myfile.open("adventurer_database");
 
   int i = 0;
-  while (i < adventurer_list.size()){
+  while (i < adventurer_list.size() - 1){
     myfile << adventurer_list[i].name() << " ";
     myfile << adventurer_list[i].hp() << " ";
     myfile << adventurer_list[i].sp() << " ";
@@ -15,7 +15,7 @@ bool saveAdventurerList(){
     myfile << adventurer_list[i].mag() << " ";
     myfile << adventurer_list[i].luk();
     myfile << "\n";       //end line
-    std::cout << i << ",";
+    //std::cout << i << ",";
     i++;
   }
 

@@ -16,10 +16,7 @@ bool loadAdventurerList(){
       std::string n1, n2;
       n2 = "";
 
-      while (!ifs.eof()){
-        //ifs >> n1 >> str >> dex >> con;
-        ifs >> n1 >> hp >> sp >> str >> stam >> mag >> luck;
-        std::cout << n1 << "-" << hp << "-" << sp << "-" << str << "-" << stam << "-" << mag << "-" << luck << std::endl;
+      while (ifs >> n1 >> hp >> sp >> str >> stam >> mag >> luck){
         adventurer_list.push_back(Adventurer(n1, hp, sp, str, stam, mag, luck));
         //create adventure with these parameters and store them into vector
       }
