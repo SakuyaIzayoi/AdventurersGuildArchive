@@ -1,17 +1,12 @@
 #include "adventurers.h"
 
 bool loadAdventurerList(){
-  //tring filename = list_file;
     std::string filename = "adventurer_database";
     std::ifstream ifs(filename.c_str());
-  //ifstream ifs("adventurer_database");
   if (ifs) {
     if (ifs.is_open()) { //can you open the file?
       std::cout << "File " << filename << " has been opened" << std::endl;
-      //int i, j;
-      //int str, dex, con;
       int hp, sp, str, stam, mag, luck;
-      int count = 0;
 
       std::string n1, n2;
       n2 = "";

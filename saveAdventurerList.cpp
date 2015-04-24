@@ -2,7 +2,6 @@
 
 bool saveAdventurerList(){
   std::ofstream myfile;
-  //myfile.open(ad_name.c_str());
   myfile.open("adventurer_database");
 
   int i = 0;
@@ -15,7 +14,6 @@ bool saveAdventurerList(){
     myfile << adventurer_list[i].mag() << " ";
     myfile << adventurer_list[i].luk();
     myfile << "\n";       //end line
-    //std::cout << i << ",";
     i++;
   }
 
