@@ -43,6 +43,7 @@ public:
 };
 
 bool saveAdventurerList();
+bool loadAdventurerList();
 
 extern std::vector<Adventurer> adventurer_list;
 
