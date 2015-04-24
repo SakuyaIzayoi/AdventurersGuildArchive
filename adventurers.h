@@ -2,7 +2,14 @@
 #define _ADVENTURERS_H_
 
 #include <string>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <vector>
 #include <iostream>
+#include <fstream>
+
+#include <sys/types.h>
 
 class Adventurer{
 private:
@@ -35,5 +42,8 @@ public:
 
 };
 
+bool saveAdventurerList();
+
+extern std::vector<Adventurer> adventurer_list;
 
 #endif
