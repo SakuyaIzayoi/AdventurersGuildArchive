@@ -39,7 +39,6 @@ public:
     std::string guild();
 
     void print();
-
 };
 
 bool saveAdventurerList();

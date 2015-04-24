@@ -1,6 +1,6 @@
 #include "adventurers.h"
 
-bool load_adventurer_list(){
+bool loadAdventurerList(){
   //tring filename = list_file;
     std::string filename = "adventurer_database";
     std::ifstream ifs(filename.c_str());
