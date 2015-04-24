@@ -6,13 +6,14 @@ int main(int argc, char **argv)
 {
     loadAdventurerList();
 
-    Adventurer adv = Adventurer("Steve", 42, 12, 7, 6, 9, 69);
+    Adventurer adv = Adventurer("John", 42, 12, 17, 6, 9, 69);
 
     adventurer_list.push_back(adv);
 
-    adventurer_list[0].print();
-    adventurer_list[1].print();
-    adventurer_list[2].print();
+    for (int i = 0; i < adventurer_list.size(); i++)
+    {
+        adventurer_list[i].print();
+    }
 
-    //saveAdventurerList();
+    saveAdventurerList();
 }
