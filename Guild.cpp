@@ -10,21 +10,21 @@
 Guild::Guild(){
 		//Blank constructor because we need one.
 		name_="";
-		guild_master_= Adventurer();
+		guild_master_= NULL;
 		member_count_=0;
 }
 
 Guild::Guild(std::string name){
 		//Constructor with just the guild name. I expect this to be used most.
 		name_=name;
-		guild_master_= Adventurer();
+		guild_master_= NULL;
 		member_count_=0;
 	}
 
 Guild::Guild(std::string name, Adventurer guild_master){
 		//Guild name, and guild master.
 		name_=name;
-		guild_master_=guild_master;
+		guild_master_= &guild_master;
 		member_count_=1;
 	}
 
@@ -51,10 +51,10 @@ std::string Guild::get_name(){
 }
 
 bool Guild::set_guild_master(Adventurer g){
-    if(guild_master_.name().compare("")){
+    if(guild_master_->name().compare("")){
         member_count_++;
     }
-    guild_master_=g;
+    guild_master_= &g;
     return true;
 }
 
@@ -74,4 +74,5 @@ bool Guild::remove_member(Adventurer a){
     }
     members_.erase(members_.begin()+i);
     member_count_--;
+    return true;
 }

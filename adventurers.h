@@ -47,7 +47,7 @@ public:
 class Guild {
 private:
 	std::string name_;
-	Adventurer guild_master_;
+	Adventurer *guild_master_;
 	unsigned int member_count_;
 	std::vector<Adventurer> members_;
 public:

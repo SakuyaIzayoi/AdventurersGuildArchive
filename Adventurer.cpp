@@ -49,33 +49,33 @@ std::string Adventurer::name(){
     return name_;
 }
 
-inline int Adventurer::hp(){
+int Adventurer::hp(){
     return hp_;
 }
-inline int Adventurer::sp(){
+int Adventurer::sp(){
     return sp_;
 }
-inline int Adventurer::str(){
+int Adventurer::str(){
     return str_;
 }
-inline int Adventurer::stam(){
+int Adventurer::stam(){
     return stam_;
 }
-inline int Adventurer::mag(){
+int Adventurer::mag(){
     return mag_;
 }
-inline int Adventurer::luk(){
+int Adventurer::luk(){
     return luk_;
 }
-inline int Adventurer::ID(){
+int Adventurer::ID(){
     return ID_;
 }
 
-inline std::string Adventurer::guild(){
+std::string Adventurer::guild(){
     return guild_;
 }
 
-inline bool Adventurer::set_hp(int hp){
+bool Adventurer::set_hp(int hp){
     if(hp>=0)
         hp_=hp;
     else
@@ -83,7 +83,7 @@ inline bool Adventurer::set_hp(int hp){
     return true;
 }
 
-inline bool Adventurer::set_sp(int sp){
+bool Adventurer::set_sp(int sp){
     if(sp>=0)
         sp_=sp;
     else
@@ -91,7 +91,7 @@ inline bool Adventurer::set_sp(int sp){
     return true;
 }
 
-inline bool Adventurer::set_str(int str){
+bool Adventurer::set_str(int str){
     if(str>=0)
         str_=str;
     else
@@ -99,7 +99,7 @@ inline bool Adventurer::set_str(int str){
     return true;
 }
 
-inline bool Adventurer::set_stam(int stam){
+bool Adventurer::set_stam(int stam){
     if(stam>=0)
         stam_=stam;
     else
@@ -107,7 +107,7 @@ inline bool Adventurer::set_stam(int stam){
     return true;
 }
 
-inline bool Adventurer::set_mag(int mag){
+bool Adventurer::set_mag(int mag){
     if(mag>=0)
         mag_=mag;
     else
@@ -115,7 +115,7 @@ inline bool Adventurer::set_mag(int mag){
     return true;
 }
 
-inline bool Adventurer::set_luk(int luk){
+bool Adventurer::set_luk(int luk){
     if(luk>=0)
         luk_=luk;
     else
@@ -123,7 +123,7 @@ inline bool Adventurer::set_luk(int luk){
     return true;
 }
 
-inline void Adventurer::set_guild(std::string guild){
+void Adventurer::set_guild(std::string guild){
     guild_=guild;
 }
 
