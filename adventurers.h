@@ -8,6 +8,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <math.h>
 
 #include <sys/types.h>
 
@@ -43,6 +44,15 @@ public:
 
 bool saveAdventurerList();
 bool loadAdventurerList();
+
+void displayAdventurerList();
+void displayAdventurerListTable();
+void printCell(int, int);
+void printCell(int, std::string);
+
+void sort(std::string, bool);
+void insertionSort(std::string, bool);    //enter a string of what stat you want to sort by
+int adventurerCompare(Adventurer, Adventurer, std::string); //returns -1, 0 or 1
 
 extern std::vector<Adventurer> adventurer_list;
 
