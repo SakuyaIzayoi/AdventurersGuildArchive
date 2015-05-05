@@ -5,6 +5,8 @@
  *      Author: Class2016
  */
 
+#include <string>
+#include <iostream>
 #include "adventurers.h"
 
 Adventurer::Adventurer(){
@@ -20,28 +22,28 @@ Adventurer::Adventurer(){
 }
 
 Adventurer::Adventurer(std::string n, int hp, int sp, int str, int stam, int mag, int luk){
-		//This is your standard adventurer, minus the ID field.
-		name_=n;
-		hp_=hp;
-		sp_=sp;
-		str_=str;
-		stam_=stam;
-		mag_=mag;
-		luk_=luk;
-		ID_=-1;
-	}
+    //This is your standard adventurer, minus the ID field.
+    name_=n;
+    hp_=hp;
+    sp_=sp;
+    str_=str;
+    stam_=stam;
+    mag_=mag;
+    luk_=luk;
+    ID_=-1;
+}
 
 Adventurer::Adventurer(std::string n, int hp, int sp, int str, int stam, int mag, int luk, int id){
-			//This one takes an ID field. The database/char maker is likely to use this.
-		name_=n;
-			hp_=hp;
-			sp_=sp;
-			str_=str;
-			stam_=stam;
-			mag_=mag;
-			luk_=luk;
-			ID_=id;
-}
+        //This one takes an ID field. The database/char maker is likely to use this.
+    name_=n;
+        hp_=hp;
+        sp_=sp;
+        str_=str;
+        stam_=stam;
+        mag_=mag;
+        luk_=luk;
+        ID_=id;
+    }
 
 std::string Adventurer::name(){
     return name_;
@@ -144,5 +146,5 @@ void Adventurer::print(){
     std::cout << "Strength: " << str_<< std::endl;
     std::cout << "Stamina:  " << stam_<< std::endl;
     std::cout << "Magic:    " << mag_<< std::endl;
-    std::cout << "Luck:     " << luk_<< std::endl << std::endl;
+    std::cout << "Luck:     " << luk_<< std::endl;
 }
