@@ -11,6 +11,9 @@
 
 #include <sys/types.h>
 
+class Adventurer;
+class Guild;
+
 class Adventurer{
 private:
 	std::string name_,guild_;
@@ -39,6 +42,25 @@ public:
     std::string guild();
 
     void print();
+};
+
+class Guild {
+private:
+	std::string name_;
+	Adventurer guild_master_;
+	unsigned int member_count_;
+	std::vector<Adventurer> members_;
+public:
+    Guild();
+    Guild(std::string);
+    Guild(std::string, Adventurer);
+    unsigned int get_member_count();
+    unsigned int is_member(Adventurer);
+    std::vector<Adventurer> get_member_list();
+    std::string get_name();
+    bool set_guild_master(Adventurer);
+    bool add_member(Adventurer);
+    bool remove_member(Adventurer);
 };
 
 bool saveAdventurerList();
