@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <math.h>
+#include <sstream>
 
 #include <sys/types.h>
 
@@ -66,6 +67,8 @@ public:
 
 bool saveAdventurerList();
 bool loadAdventurerList();
+
+void handleAdventurer();
 
 void displayAdventurerList();
 void displayAdventurerListTable();

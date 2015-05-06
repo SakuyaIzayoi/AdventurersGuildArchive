@@ -6,17 +6,28 @@ int main(int argc, char **argv)
 {
     loadAdventurerList();
 
-    Adventurer adv = Adventurer("John", 42, 12, 17, 6, 9, 69);
+    std::string input;
 
-    adventurer_list.push_back(adv);
+    std::cout << "Adventurer or Guildmaster?: " << std::endl;
+    std::cin >> input;
 
-    for (int i = 0; i < adventurer_list.size(); i++)
+    while(input.compare("exit"))
     {
-        adventurer_list[i].print();
+        if (!input.compare("Adventurer"))
+        {
+            handleAdventurer();
+        }
+
+        if (!input.compare("Guildmaster"))
+        {
+
+        }
+
+        std::cout << "Adventurer or Guildmaster?: " << std::endl;
+        std::cin >> input;
     }
 
     saveAdventurerList();
 
     return 0;
 }
-//Useless Commit
