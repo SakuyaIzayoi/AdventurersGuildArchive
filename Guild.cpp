@@ -59,19 +59,40 @@ bool Guild::set_guild_master(Adventurer g){
 }
 
 bool Guild::add_member(Adventurer a){
+    a.set_guild(name_);
     members_.push_back(a);
     member_count_++;
+    for (int i = 0; i < adventurer_list.size(); i++)
+    {
+        if (!a.name().compare(adventurer_list[i].name()))
+            adventurer_list[i].set_guild(name_);
+    }
     return true;
 }
 
 bool Guild::remove_member(Adventurer a){
-    unsigned int i = is_member(a);
-    if(!(i==-1)){
-        return false;
+    //unsigned int i = is_member(a);
+    //if(!(i==-1)){
+    //    return false;
+    //}
+    //members_.erase(members_.begin()+i);
+    //member_count_--;
+    for (int i = 0; i < members_.size(); i++)
+    {
+        if (!a.name().compare(members_[i].name()))
+        {
+            members_.erase(members_.begin()+i);
+            members_[i].set_guild("");
+            member_count_--;
+            return true;
+        }
     }
-    members_.erase(members_.begin()+i);
-    member_count_--;
-    return true;
+    for (int i = 0; i < adventurer_list.size(); i++)
+    {
+        if (!a.name().compare(adventurer_list[i].name()))
+            adventurer_list[i].set_guild("");
+    }
+    return false;
 }
 
 void Guild::toString()
