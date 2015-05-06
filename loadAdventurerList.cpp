@@ -5,7 +5,6 @@ bool loadAdventurerList(){
     std::ifstream ifs(filename.c_str());
   if (ifs) {
     if (ifs.is_open()) { //can you open the file?
-      std::cout << "File " << filename << " has been opened" << std::endl;
       int hp, sp, str, stam, mag, luck;
 
       std::string n1, n2;
@@ -27,6 +26,5 @@ bool loadAdventurerList(){
     return false;
   }
   ifs.close();
-  std::cout << "File " << filename << " has closed" << std::endl;
   return true;
 }
