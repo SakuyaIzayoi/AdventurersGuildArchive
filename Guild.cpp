@@ -81,16 +81,16 @@ bool Guild::remove_member(Adventurer a){
     {
         if (!a.name().compare(members_[i].name()))
         {
+            for (int j = 0; j < adventurer_list.size(); j++)
+            {
+                if (!a.name().compare(adventurer_list[j].name()))
+                    adventurer_list[j].set_guild("");
+            }
             members_.erase(members_.begin()+i);
             members_[i].set_guild("");
             member_count_--;
             return true;
         }
-    }
-    for (int i = 0; i < adventurer_list.size(); i++)
-    {
-        if (!a.name().compare(adventurer_list[i].name()))
-            adventurer_list[i].set_guild("");
     }
     return false;
 }
