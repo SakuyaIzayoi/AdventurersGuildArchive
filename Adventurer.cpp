@@ -130,9 +130,9 @@ void Adventurer::set_guild(std::string guild){
 void Adventurer::print(){
     char ch = *name_.rbegin(); //A cheat in C++ '03. Gets last letter of string.
     if(ch=='s')
-        std::cout << name_ << "' Resume" << std::endl;
+        std::cout << '\n' << name_ << "' Resume" << std::endl;
     else
-        std::cout << name_ << "'s Resume" << std::endl;
+        std::cout << '\n' << name_ << "'s Resume" << std::endl;
 
     std::cout << std::endl;
 

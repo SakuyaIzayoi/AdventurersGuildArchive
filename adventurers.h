@@ -63,12 +63,14 @@ public:
     bool set_guild_master(Adventurer);
     bool add_member(Adventurer);
     bool remove_member(Adventurer);
+    void toString();
 };
 
 bool saveAdventurerList();
 bool loadAdventurerList();
 
 void handleAdventurer();
+void handleGuildmaster();
 
 void displayAdventurerList();
 void displayAdventurerListTable();

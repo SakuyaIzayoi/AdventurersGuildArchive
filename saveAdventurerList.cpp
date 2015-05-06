@@ -27,7 +27,6 @@ bool saveAdventurerList(){
     myfile << adventurer_list[i].luk();
   }
 
-  std::cout << "closing..." << std::endl;
   myfile.close();
   return 0;
 }

@@ -59,9 +59,6 @@ bool Guild::set_guild_master(Adventurer g){
 }
 
 bool Guild::add_member(Adventurer a){
-    if(is_member(a)==-1){
-        return false;
-    }
     members_.push_back(a);
     member_count_++;
     return true;
@@ -75,4 +72,10 @@ bool Guild::remove_member(Adventurer a){
     members_.erase(members_.begin()+i);
     member_count_--;
     return true;
+}
+
+void Guild::toString()
+{
+    for (int i = 0; i < members_.size(); i++)
+        members_[i].print();
 }

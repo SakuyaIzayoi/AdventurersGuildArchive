@@ -1,5 +1,5 @@
 NAME = adv
-SRC = Adventurer.cpp saveAdventurerList.cpp loadAdventurerList.cpp insertionSort.cpp displayAdventurerList.cpp Guild.cpp handleAdventurer.cpp
+SRC = Adventurer.cpp saveAdventurerList.cpp loadAdventurerList.cpp insertionSort.cpp displayAdventurerList.cpp Guild.cpp handleAdventurer.cpp handleGuildmaster.cpp
 OBJ = $(SRC:.cpp=.o)
 RM = rm -f
 MAIN = main.o

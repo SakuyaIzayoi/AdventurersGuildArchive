@@ -58,5 +58,16 @@ int main(int argc, char **argv)
         std::cout << "Setters BAD..." << std::endl;
     }
 
+    // make a guild named "testguild"
+    Guild guild = Guild("testguild");
+
+    // add bobby to the guild
+    std::cout << "Adding bobby..." << std::endl;
+    guild.add_member(adventurer_list[2]);
+
+    std::cout << "Printing..." << std::endl;
+    // display guildmember bobby
+    guild.get_member_list()[0].print();
+
     return 0;
 }

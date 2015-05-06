@@ -20,9 +20,10 @@ int main(int argc, char **argv)
 
         if (!input.compare("Guildmaster"))
         {
-
+            handleGuildmaster();
         }
 
+        saveAdventurerList();
         std::cout << "Adventurer or Guildmaster?: " << std::endl;
         std::cin >> input;
     }
