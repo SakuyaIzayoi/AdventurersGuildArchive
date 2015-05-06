@@ -1,11 +1,5 @@
 #include "adventurers.h"
 
-/*
- * As of now only the loading, creation, and storage of Adventurers is implemented.
- * Future builds will have the ability to input a character from the command
- * line
- */
-
 std::vector<Adventurer> adventurer_list;
 
 int main(int argc, char **argv)
@@ -68,6 +62,31 @@ int main(int argc, char **argv)
     std::cout << "Printing..." << std::endl;
     // display guildmember bobby
     guild.get_member_list()[0].print();
+
+    // add another
+    guild.add_member(adventurer_list[1]);
+
+    std::cout << "##### PRINTING ADVENTURER LIST" << std::endl;
+    displayAdventurerList();
+
+    std::cout << "##### PRINTING ADVENTURER LIST TABLE" << std::endl;
+    displayAdventurerListTable();
+
+    // test adventurer compare
+    if (!adventurerCompare(adventurer_list[2], adventurer_list[2], "name"))
+    {
+        std::cout << "\n##### COMPARISON SUCCESSFUL" << std::endl;
+    }
+    else
+    {
+        std::cout << "\n##### COMPARISON BAD" << std::endl;
+    }
+
+    // sort adventurers by HP
+    std::cout << "\n##### SORTING BY HP" << std::endl;
+    insertionSort("hp", false);
+
+    displayAdventurerListTable();
 
     return 0;
 }
