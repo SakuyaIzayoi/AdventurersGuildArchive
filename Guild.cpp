@@ -34,7 +34,7 @@ unsigned int Guild::get_member_count(){
 
 unsigned int Guild::is_member(Adventurer a){
     for(int i = 0; i < members_.size(); i++){
-        if(a.guild().compare(name_)){
+        if(!a.guild().compare(name_)){
             return i;
         }
     }
