@@ -1,4 +1,5 @@
 # AdventurersGuildArchive
+![MagnumCI](https://magnum-ci.com/status/f84b1b8c53b088bc22fff36159811ff4.png)
 
 ## What It's About
 
