@@ -4,7 +4,7 @@ std::vector<Adventurer> adventurer_list;
 
 int main(int argc, char **argv)
 {
-    std::cout << "Testing..." << std::endl;
+    std::cout << "######## Testing..." << std::endl;
 
     // Default constructor
     adventurer_list.push_back(Adventurer());
@@ -26,11 +26,11 @@ int main(int argc, char **argv)
     adventurer_list[2].print();
     if (adventurer_list[2].name().compare("The Barbarian's Guild"))
     {
-        std::cout << "Name Setting OK..." << std::endl;
+        std::cout << "##### Name Setting OK..." << std::endl;
     }
     else
     {
-        std::cout << "Name Setting BAD..." << std::endl;
+        std::cout << "##### Name Setting BAD..." << std::endl;
     }
 
     // check setters
@@ -45,21 +45,21 @@ int main(int argc, char **argv)
 
     if (a->hp() == 20 && a->sp() == 14 && a->luk() == 42 && a->mag() == 17 && a->str() == 12 && a->stam() == 6)
     {
-        std::cout << "Setters OK..." << std::endl;
+        std::cout << "##### Setters OK..." << std::endl;
     }
     else
     {
-        std::cout << "Setters BAD..." << std::endl;
+        std::cout << "##### Setters BAD..." << std::endl;
     }
 
     // make a guild named "testguild"
     Guild guild = Guild("testguild");
 
     // add bobby to the guild
-    std::cout << "Adding bobby..." << std::endl;
+    std::cout << "##### Adding bobby..." << std::endl;
     guild.add_member(adventurer_list[2]);
 
-    std::cout << "Printing..." << std::endl;
+    std::cout << "##### Printing..." << std::endl;
     // display guildmember bobby
     guild.get_member_list()[0].print();
 
