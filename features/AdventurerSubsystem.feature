@@ -9,3 +9,4 @@ Feature: Adventurer's Subsystem
         Given: The Adventurer has input all of his information
         When: The Adventurer hits "Enter" to submit
         Then: His profile should be added to the Adventurer List
+        And: His input stats match his stats in the Adventurer List
